@@ -1,0 +1,13 @@
+.stats {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 2px grey solid;
+  width: calc(33% - 4px);
+}

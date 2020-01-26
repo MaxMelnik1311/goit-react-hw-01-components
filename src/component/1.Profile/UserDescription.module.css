@@ -1,0 +1,9 @@
+.name {
+  font-size: 18px;
+}
+
+.avatar {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+}
