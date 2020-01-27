@@ -8,7 +8,7 @@
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
-  "homepage": "https://MaxMelnik1311.github.io/goit-react-hw01-components",
+  "homepage": "https://MaxMelnik1311.github.io/goit-react-hw-01-components",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
