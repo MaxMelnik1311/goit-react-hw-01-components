@@ -1,17 +1,19 @@
 import React from 'react';
 import T from 'prop-types';
+import StatsItem from './StatsItem';
 import styles from './Stats.module.css';
 
 function Stats({ stats, title }) {
   return (
     <section className={styles.statsSection}>
-      <h2 className="title">{title}</h2>
+      {title && <h2 className="title">{title}</h2>}
       <ul className={styles.statList}>
         {stats.map(item => (
-          <li key={item.id} className={styles.item}>
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage} %</span>
-          </li>
+          <StatsItem
+            key={item.id}
+            label={item.label}
+            percentage={item.percentage}
+          />
         ))}
       </ul>
     </section>

@@ -15,9 +15,9 @@ function Profile({ user }) {
         location={user.location}
       />
       <UserStats
-        followersQuantity={stats.followers}
-        viewsQuantity={stats.views}
-        likesQuantity={stats.likes}
+        followers={stats.followers}
+        views={stats.views}
+        likes={stats.likes}
       />
     </div>
   );

@@ -1,16 +1,22 @@
 import React from 'react';
+import T from 'prop-types';
+import Friend from './Friend';
 import styles from './FriendList.module.css';
 
-function FriendList(prop) {
-  const { friends } = prop;
+function FriendList({ friends }) {
   const list = friends.map(friend => (
-    <li key={friend.id} className={styles.person}>
-      <span className={friend.isOnline ? styles.online : styles.offline} />
-      <img className={styles.avatar} src={friend.avatar} alt="" />
-      <p className="name">{friend.name}</p>
-    </li>
+    <Friend
+      key={friend.id}
+      isOnline={friend.isOnline}
+      avatar={friend.avatar}
+      name={friend.name}
+    />
   ));
   return <ul className={styles.friendList}>{list}</ul>;
 }
+
+FriendList.propTypes = {
+  friends: T.arrayOf({}).isRequired,
+};
 
 export default FriendList;
